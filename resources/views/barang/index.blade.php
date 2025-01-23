@@ -22,7 +22,7 @@
 
 @push('scripts')
 <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('#barang-table').DataTable({
             ajax: '{{ url("/api/barang") }}', 
             columns: [

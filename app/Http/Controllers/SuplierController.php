@@ -9,7 +9,16 @@ class SuplierController extends Controller
 {
     public function index()
     {
-        $supliers = Suplier::all(); // Mengambil semua data dari tabel tbl_suplier
-        return view('suplier.index', compact('supliers')); // Kirim data ke view
+
+        return view('suplier.index');
+    }
+    public function getSuplier()
+    {
+        try {
+            $supliers = Suplier::all();
+            return response()->json(['data' => $supliers]);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Gagal memuat data suplier.'], 500);
+        }
     }
 }

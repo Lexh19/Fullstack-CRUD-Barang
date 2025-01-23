@@ -9,7 +9,7 @@ class BarangController extends Controller
 {
     public function index()
     {
-        return view('goods.goods');
+        return view('barang.index');
     }
     public function getBarang()
     {

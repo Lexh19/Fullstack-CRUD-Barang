@@ -17,8 +17,9 @@ class BarangSeeder extends Seeder
 
         foreach ($data as $item) {
             DB::table('tbl_barang')->updateOrInsert(
-                ['kodebrg' => $item['kodebrg']], // Kondisi unik
-                $item // Data yang akan dimasukkan atau di-update
+                ['kodebrg' => $item['kodebrg']],
+                $item
+
             );
         }
     }
